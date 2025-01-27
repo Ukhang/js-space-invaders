@@ -1,4 +1,4 @@
-# JS Space Invaders
+# ![spaceship 1](https://github.com/user-attachments/assets/8ea924ef-ba12-4e7d-8be1-6eccf38dcd20) JS Space Invaders
 
 JS Space Invaders is a classic arcade-style shooting game built using JavaScript and HTML Canvas. Inspired by the iconic 80s game, this project challenges players to defend Earth from waves of invading alien forces.
 
