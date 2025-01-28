@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/spaceship.png">
     <title>JS Space Invaders</title>
 
     <style>
@@ -26,6 +27,51 @@
     >
       <span>Score:</span>
       <span id="scoreEl">0</span>
+    </p>
+    <p
+      style="
+        position: fixed;
+        z-index: 10;
+        color: white;
+        left: 10px;
+        top: 30px;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+      "
+    >
+      <span>left: </span>
+      <span>a</span>
+    </p>
+    <p
+      style="
+        position: fixed;
+        z-index: 10;
+        color: white;
+        left: 10px;
+        top: 50px;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+      "
+    >
+      <span>Right: </span>
+      <span>d</span>
+    </p>
+    <p
+      style="
+        position: fixed;
+        z-index: 10;
+        color: white;
+        left: 10px;
+        top: 70px;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+      "
+    >
+      <span>Fire: </span>
+      <span>Space</span>
     </p>
     <canvas> </canvas>
 
