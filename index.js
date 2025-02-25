@@ -30,9 +30,6 @@ class Player {
   }
 
   draw() {
-    // c.fillStyle = 'red';
-    // c.fillRect(this.position.x, this.position.y, this.width, this.height);
-
     c.save();
     c.globalAlpha = this.opacity;
     c.translate(
@@ -76,7 +73,7 @@ class Projectile {
   draw() {
     c.beginPath();
     c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
-    c.fillStyle = "red";
+    c.fillStyle = "yellow";
     c.fill();
     c.closePath();
   }
@@ -164,9 +161,6 @@ class Invader {
   }
 
   draw() {
-    // c.fillStyle = 'red';
-    // c.fillRect(this.position.x, this.position.y, this.width, this.height);
-
     c.drawImage(
       this.image,
       this.position.x,
@@ -302,7 +296,7 @@ function createParticles({ object, color, fades }) {
           y: (Math.random() - 0.5) * 2,
         },
         radius: Math.random() * 3,
-        color: color || "#BAA0DE",
+        color: color || "#008000",
         fades
       })
     );
@@ -463,7 +457,7 @@ function animate() {
   frames++;
 }
 
-animate();
+// animate();
 
 window.addEventListener("keydown", ({ key }) => {
   if (game.over) return 
@@ -502,7 +496,22 @@ window.addEventListener("keyup", ({ key }) => {
       keys.d.pressed = false;
       break;
     case " ":
-      // keys.space.pressed = false;
       break;
   }
 });
+
+document.getElementById("playButton").addEventListener("click", function () {
+  document.getElementById("gameModal").style.display = "none";
+  startGame();
+});
+
+if (game.over == true) {
+  document.getElementById("playButton").addEventListener("click", function () {
+    document.getElementById("gameOverModal").style.display = "none";
+    startGame();
+  });
+}
+
+function startGame() {
+  animate();
+};
